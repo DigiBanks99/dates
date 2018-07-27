@@ -2,11 +2,13 @@
 
 namespace Dates
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      DateTime utc = DateTime.UtcNow;
+
+      Console.WriteLine($"{utc:o}\tKind: {utc.Kind}");
     }
+  }
 }

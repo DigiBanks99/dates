@@ -17,3 +17,6 @@ build/
 
 # NuGet Packages
 *.nupkg
+
+# Editor Folders
+.vscode
