@@ -9,17 +9,17 @@ namespace Dates
     {
       try
       {
-        var utc = DateTime.UtcNow;
+        var utc = DateTimeOffset.UtcNow;
 
-        Console.WriteLine($"{utc:o}\t\tKind: {utc.Kind}");
+        Console.WriteLine($"{utc:o}");
 
         var tz = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
 
-        var est = TimeZoneInfo.ConvertTimeFromUtc(utc, tz);
+        var est = TimeZoneInfo.ConvertTime(utc, tz);
 
-        Console.WriteLine($"{est:o}\t\tKind: {est.Kind}");
+        Console.WriteLine($"{est:o}");
 
-        Console.WriteLine($"{utc.ToLocalTime():o}\tKind: {utc.Kind}");
+        Console.WriteLine($"{utc.ToLocalTime():o}");
       }
       catch (Exception ex)
       {
