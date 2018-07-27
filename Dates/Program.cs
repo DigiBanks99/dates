@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading;
 
 namespace Dates
@@ -9,6 +10,10 @@ namespace Dates
     {
       try
       {
+
+        var sw = new Stopwatch();
+
+        sw.Start();
         var utc = DateTimeOffset.UtcNow;
 
         Console.WriteLine($"{utc:o}");
@@ -20,6 +25,9 @@ namespace Dates
         Console.WriteLine($"{est:o}");
 
         Console.WriteLine($"{utc.ToLocalTime():o}");
+        sw.Stop();
+
+        Console.WriteLine($"{sw.Elapsed}");
       }
       catch (Exception ex)
       {
