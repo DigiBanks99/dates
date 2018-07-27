@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Time } from '@angular/common';
+import * as moment from 'moment';
 
 @Component({
     selector: 'app-root',
@@ -21,7 +21,7 @@ export class AppComponent {
         return this.getCurrentDateAsDate().toISOString();
     }
 
-    public getCurrentDateAsDateFormattedUCT(): string {
+    public getCurrentDateAsDateFormattedUTC(): string {
         return this.getCurrentDateAsDate().toUTCString();
     }
 
@@ -41,14 +41,44 @@ export class AppComponent {
         return this.getCurrentDateAsDate().getTimezoneOffset();
     }
 
-    public getTimeZone(): string {
-        const tz = this.getCurrentDateAsDateTimeZoneOffset();
-        const time = {
-            hours: tz / 60,
-            minutes: tz % 60
-        };
+    public getCustom(): string {
+        return 'Yeah... That ain\'t gonna happen';
+    }
 
-        return `${time.hours.toString().padStart(2, '0')}:${time.minutes.toString().padStart(2, '0')}`;
+    public getMomentCurrentDate(): number {
+        return moment.now();
+    }
+
+    public getMomentCurrentDateAsDate(): Date {
+        return moment().toDate();
+    }
+
+    public getMomentCurrentDateAsISO(): string {
+        return moment().toISOString();
+    }
+
+    public getMomentCurrentDateAsUTC(): string {
+        return moment().utc().toISOString();
+    }
+
+    public getMomentCurrentDateAsDateString(): string {
+        return moment().utc().toString();
+    }
+
+    public getMomentCurrentDateAsJSON(): string {
+        return moment().toJSON();
+    }
+
+    public getMomentCurrentDateToString(): string {
+        return moment().toString();
+    }
+
+    public getMomentCurrentDateTimeZone(): string {
+        return moment().format('Z');
+    }
+
+    public getMomentCurrentDateCustom(): string {
+        return moment().format('YYYY-MM-DDTHH:mm:ss.SSSSSSZ');
     }
 
     private getCurrentDate(): number {

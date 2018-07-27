@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+.container {
+    display: flex;
+}
+
+.left, .right {
+    border: 1px solid black;
+    padding: 0;
+}
+
+h2 {
+    background-color: rgb(146, 177, 218);
+    border-bottom: 1px solid black;
+    color: white;
+}
+
+h3 {
+    background-color: rgb(212, 212, 212);
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+p {
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+}
+
+h2, h3, p {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin: 0;
+}
+
+.unusable {
+    background-color: rgb(153, 89, 89);
+    color: white;
+}
+
+h3.unusable {
+    background-color: rgb(167, 120, 120);
+    border-bottom: 1px solid rgb(167, 120, 120);
+    color: white;
+}
+
+p.unusable:last-of-type {
+    border-bottom: 1px solid black;
+}

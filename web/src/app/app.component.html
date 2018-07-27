@@ -1,22 +1,45 @@
 <h1>Dates</h1>
-<div>
-    <h2>Current Date</h2>
-    <h3>As String</h3>
-    <p>{{getCurrentDateAsNumber()}}</p>
-    <h3>As Date</h3>
-    <p>{{getCurrentDateAsDate()}}</p>
-    <h3>As ISO Date</h3>
-    <p>{{getCurrentDateAsDateFormattedISO()}}</p>
-    <h3>As UCT Date</h3>
-    <p>{{getCurrentDateAsDateFormattedUCT()}}</p>
-    <h3>As Date - Date</h3>
-    <p>{{getCurrentDateAsDateFormattedDate()}}</p>
-    <h3>As JSON Date</h3>
-    <p>{{getCurrentDateAsDateFormattedJSON()}}</p>
-    <h3>As ToString Date</h3>
-    <p>{{getCurrentDateAsDateToString()}}</p>
-    <h3>As TimeZone Offset</h3>
-    <p>{{getCurrentDateAsDateTimeZoneOffset()}}</p>
-    <h3>As Time</h3>
-    <p>{{getTimeZone()}}</p>
+<div class="container">
+    <div class="left">
+        <h2>Date JavaScript</h2>
+        <h3>As String</h3>
+        <p>{{getCurrentDateAsNumber()}}</p>
+        <h3>As Date</h3>
+        <p>{{getCurrentDateAsDate()}}</p>
+        <h3>As ISO</h3>
+        <p>{{getCurrentDateAsDateFormattedISO()}}</p>
+        <h3>As UCT</h3>
+        <p>{{getCurrentDateAsDateFormattedUTC()}}</p>
+        <h3>As Date Formatted</h3>
+        <p>{{getCurrentDateAsDateFormattedDate()}}</p>
+        <h3>As JSON</h3>
+        <p>{{getCurrentDateAsDateFormattedJSON()}}</p>
+        <h3>To String</h3>
+        <p>{{getCurrentDateAsDateToString()}}</p>
+        <h3 class="unusable">Zone</h3>
+        <p class="unusable">{{getCurrentDateAsDateTimeZoneOffset()}}</p>
+        <h3 class="unusable">Custom</h3>
+        <p class="unusable">{{getCustom()}}</p>
+    </div>
+    <div class="right">
+        <h2>Date Moment</h2>
+        <h3>As String</h3>
+        <p>{{getMomentCurrentDate()}}</p>
+        <h3>As Date</h3>
+        <p>{{getMomentCurrentDateAsDate()}}</p>
+        <h3>As ISO</h3>
+        <p>{{getMomentCurrentDateAsISO()}}</p>
+        <h3>As UTC ISO</h3>
+        <p>{{getMomentCurrentDateAsUTC()}}</p>
+        <h3>As Date Formatted</h3>
+        <p>{{getMomentCurrentDateAsDateString()}}</p>
+        <h3>As JSON</h3>
+        <p>{{getMomentCurrentDateAsJSON()}}</p>
+        <h3>To String</h3>
+        <p>{{getMomentCurrentDateToString()}}</p>
+        <h3>Zone</h3>
+        <p>{{getMomentCurrentDateTimeZone()}}</p>
+        <h3>Custom</h3>
+        <p>{{getMomentCurrentDateCustom()}}</p>
+    </div>
 </div>
