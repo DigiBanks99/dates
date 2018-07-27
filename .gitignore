@@ -20,3 +20,11 @@ build/
 
 # Editor Folders
 .vscode
+
+# Node
+node_modules/
+package-lock.json
+
+# Angular
+assets/*
+!assets/.gitkeep
