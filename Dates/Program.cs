@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace Dates
 {
@@ -10,13 +11,15 @@ namespace Dates
       {
         var utc = DateTime.UtcNow;
 
-        Console.WriteLine($"{utc:o}\tKind: {utc.Kind}");
+        Console.WriteLine($"{utc:o}\t\tKind: {utc.Kind}");
 
         var tz = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
 
         var est = TimeZoneInfo.ConvertTimeFromUtc(utc, tz);
 
-        Console.WriteLine($"{est:o}\tKind: {est.Kind}");
+        Console.WriteLine($"{est:o}\t\tKind: {est.Kind}");
+
+        Console.WriteLine($"{utc.ToLocalTime():o}\tKind: {utc.Kind}");
       }
       catch (Exception ex)
       {
